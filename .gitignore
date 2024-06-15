@@ -105,3 +105,6 @@ dist
 
 # Tap Testing Output
 .tap
+
+# Don't commit .js files
+add.js
