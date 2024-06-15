@@ -253,17 +253,23 @@ This will install the following 3 packages:
   https://github.com/istanbuljs/nyc
 
 You don't need to know how any of these work,
-but if you're curious you can follow the links and read.
+but if you're curious you can follow the links and read. 🔗 👀
 
 With those `devDependencies` installed, 
-open your `package.json` file and add the following `scripts` definition:
+open your `package.json` file 
+and add the following `scripts` definition:
 
 ```json
 "scripts": {
-  "test": "nyc tap ./add.test.ts",
+  "test": "nyc --reporter=lcov tap ./add.test.ts",
   "coverage": "nyc --report html tap ./add.test.ts && open coverage/index.html"
 },
 ```
+
+This script is just saying: <br />
+`nyc` instrument (collect coverage data for) 
+the following `tap` test output
+for the `add.test.ts` file.
 
 Once you have _saved_ the `package.json` file. 
 You can _run_ the tests using the command:
@@ -300,6 +306,7 @@ Lines        : 100% ( 2/2 )
 
 `#success`
 
+This is an excellent starting point on your `TypeScript` journey!
 
 Instead of duplicating content here, 
 please see:
