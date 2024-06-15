@@ -1,9 +1,20 @@
 {
-  "name": "terminate",
+  "name": "learn-typescript",
   "version": "1.0.0",
   "description": "Quick intro to TypeScript for busy engineers!",
   "devDependencies": {
+    "@tapjs/typescript": "^1.4.13",
+    "nyc": "^17.0.0",
+    "tap": "^19.2.5",
     "tsx": "^4.15.6",
     "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "test": "nyc tap ./add.test.ts",
+    "coverage": "nyc --report html tap ./add.test.ts && open coverage/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwyl/learn-typescript.git"
   }
 }
