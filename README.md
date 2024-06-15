@@ -7,7 +7,7 @@ to enhance your `JavaScript` skills
 with **_type_ safety**. 
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/learn-typescript/ci.yml?label=build&style=flat-square&branch=main)](https://github.com/dwyl/learn-typescript/actions/workflows/ci.yml)
-[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/learn-typescript/master.svg?style=flat-square)](https://codecov.io/github/dwyl/learn-typescript?branch=master)
+[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/learn-typescript/main.svg?style=flat-square)](https://codecov.io/github/dwyl/learn-typescript?branch=main)
 [![TypeScript Version](http://img.shields.io/badge/TypeScript-v5-brightgreen.svg?style=flat-square "Latest Typescript")](https://www.typescriptlang.org/download/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-typescript/issues)
 [![HitCount](https://hits.dwyl.com/dwyl/learn-typescript.svg)](https://hits.dwyl.com/dwyl/learn-typescript)
