@@ -1,6 +1,6 @@
 {
   "all": true,
-  "include": ["*.js"],
+  "include": ["*.ts"],
   "reporter": [
     "text-summary",
     "html"
