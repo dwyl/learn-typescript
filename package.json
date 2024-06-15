@@ -1,0 +1,8 @@
+{
+  "name": "terminate",
+  "version": "1.0.0",
+  "description": "Quick intro to TypeScript for busy engineers!",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
