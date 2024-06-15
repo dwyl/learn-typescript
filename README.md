@@ -49,11 +49,9 @@ to make our lives easier.
 
 `JavaScript` is 
 [**_dynamically_ typed**](https://en.wikipedia.org/wiki/Dynamic_programming_language)
-which means
-variables can be assigned _any_ value 
+so variables can be assigned _any_ value 
 by the interpreter at runtime 
 based on the variable's value at the time.
-
 This is great if you need flexibility while building something _fast_,
 but it becomes a problem later when your function needs to _know_ 
 what type of variable it is going to receive. 
@@ -85,7 +83,9 @@ add(1, "hello")
 > '1hello'
 ```
 
-It **_still_ works** because `JavaScript` has type-coerced the `1` to a `string`
+It **_still_ works** because `JavaScript` has 
+[type-coerced](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
+the `1` to a `string`
 and returned a `string`, in this case `'1hello'` as the result! 
 
 What if somehow a 
@@ -97,7 +97,9 @@ add(1, NaN)
 > NaN
 ```
 
-Well now the `NaN` cascades through the rest of your Application without being caught!
+Well now the `NaN` cascades 
+through the rest of your application 
+without being caught!
 If you're building an interface for anything in ***Finance***,
 the _last_ thing you want is a `NaN` value sneaking in
 as the result of a simple calculation. 
@@ -162,14 +164,14 @@ the `TypeScript` _playground_:
 
 You can use the playground to learn the basics online without installing anything,
 but if you want to get serious about _building_ something, 
-you'll need to _install_ `TypeScript` on your machine. 
+you'll need to **_install_ `TypeScript`** on **_your_ machine**. ⬇️ 💻
 
 
 # How? 👩‍💻
 
 Buckle up! You're in for a ride! 🎢
 
-## Install
+## Install 🔽
 
 Install and save `typescript`
 as a `devDependency`:
@@ -178,7 +180,7 @@ as a `devDependency`:
 npm install typescript tsx --save-dev
 ```
 
-## Quick Example
+## _Extended_ Example ➕
 
 Create a file called `add.ts`
 and add the following lines of code to it:
@@ -291,7 +293,6 @@ Lines        : 100% ( 2/2 )
 ```
 
 `#success`
-
 
 
 Instead of duplicating content here, 
