@@ -226,7 +226,13 @@ tap.test('add a negative number should work', (t: Test) => {
 })
 ```
 
-This file just imports the `tap` file 
+This file just imports the `tap` library 
+and `add` function from `add.ts` file.
+
+Then it defines _two_ tests for good measure.
+Once is the basic `1 + 2 = 3` test
+and the other adds a _negative_ number
+which exercises our `add` function's versatility. 
 
 
 ### Setup the Testing Library & Scripts

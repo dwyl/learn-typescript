@@ -10,7 +10,7 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
-    "test": "nyc tap ./add.test.ts",
+    "test": "nyc --reporter=lcov tap ./add.test.ts",
     "coverage": "nyc --report html tap ./add.test.ts && open coverage/index.html"
   },
   "repository": {
