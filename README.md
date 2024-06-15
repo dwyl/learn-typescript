@@ -1,18 +1,18 @@
 <div align="center">
 
-# Learn `Tpescript`
+# Learn `TypeScript`
 
 Learn `TypeScript` 
 to enhance your `JavaScript` skills 
-with **_type_ safety**.
+with **_type_ safety**. 
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/learn-typescript/ci.yml?label=build&style=flat-square&branch=main)](https://github.com/dwyl/learn-typescript/actions/workflows/ci.yml)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/learn-typescript/master.svg?style=flat-square)](https://codecov.io/github/dwyl/learn-typescript?branch=master)
-[![Dependencies: None](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-typescript/blob/main/package.json#L35 "Zero Dependencies")
+[![TypeScript Version](http://img.shields.io/badge/TypeScript-v5-brightgreen.svg?style=flat-square "Latest Typescript")](https://www.typescriptlang.org/download/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-typescript/issues)
 [![HitCount](https://hits.dwyl.com/dwyl/learn-typescript.svg)](https://hits.dwyl.com/dwyl/learn-typescript)
 
-<div>
+</div>
 
 # Why? 🤷‍♀️
 
@@ -27,7 +27,7 @@ and don't want the pain of
 Any software engineer
 with (or without) 
 `JavaScript` skills
-who wants a better experience.
+who wants a better experience. 😍
 
 
 # What? 💭
@@ -85,7 +85,7 @@ add(1, "hello")
 > '1hello'
 ```
 
-It still works because `JavaScript` has type-coerced the `1` to a `string`
+It **_still_ works** because `JavaScript` has type-coerced the `1` to a `string`
 and returned a `string`, in this case `'1hello'` as the result! 
 
 What if somehow a 
@@ -160,15 +160,146 @@ the `TypeScript` _playground_:
 
 ![typescript-error-string-not-number](https://github.com/dwyl/learn-nextjs/assets/194400/c0dc988b-9866-47ae-acc8-4b3c9f9642bf)
 
+You can use the playground to learn the basics online without installing anything,
+but if you want to get serious about _building_ something, 
+you'll need to _install_ `TypeScript` on your machine. 
 
 
 # How? 👩‍💻
 
 Buckle up! You're in for a ride! 🎢
 
+## Install
+
+Install and save `typescript`
+as a `devDependency`:
+
+```sh
+npm install typescript tsx --save-dev
+```
+
+## Quick Example
+
+Create a file called `add.ts`
+and add the following lines of code to it:
+
+```ts
+export function add(x: number, y: number): number {
+  return x + y;
+}
+
+console.log(add(1, 2))
+```
+
+Once saved, run the the file with the command:
+
+```sh
+npx tsx add.ts
+```
+
+You should see the output:
+```sh
+3
+```
+
+So we know the file compiles and `add` function _works_.
+
+### _Test_ `add` Function
+
+Create a new file called `add.test.ts`
+and type (or paste) the following code:
+
+```ts
+import tap, { Test } from 'tap';
+import { add } from './add.ts';
+
+tap.test('add two numbers', (t: Test) => {
+  t.equal(add(1, 2), 3);
+  t.end();
+})
+
+tap.test('add a negative number should work', (t: Test) => {
+  t.equal(add(1, -2), -1);
+  t.end();
+})
+```
+
+This file just imports the `tap` file 
+
+
+### Setup the Testing Library & Scripts
+
+Download the testing library and save to `package.json`:
+
+```sh
+npm install tap @tapjs/typescript nyc --save-dev
+```
+
+This will install the following 3 packages:
+
+- `tap` - simple testing library
+  [node-tap.org](https://node-tap.org/)
+- `@tapjs/typescript` - tap `TypeScript` plugin
+  https://tapjs.github.io/tapjs/modules/_tapjs_typescript.html
+- `nyc` - test/code coverage library 
+  https://github.com/istanbuljs/nyc
+
+You don't need to know how any of these work,
+but if you're curious you can follow the links and read.
+
+With those `devDependencies` installed, 
+open your `package.json` file and add the following `scripts` definition:
+
+```json
+"scripts": {
+  "test": "nyc tap ./add.test.ts",
+  "coverage": "nyc --report html tap ./add.test.ts && open coverage/index.html"
+},
+```
+
+Once you have _saved_ the `package.json` file. 
+You can _run_ the tests using the command:
+
+```sh
+npm test
+```
+
+You should see output similar to the following:
+
+```sh
+> nyc tap ./add.test.ts
+
+ PASS  add.test.ts 2 OK 773ms
+
+
+  🌈 TEST COMPLETE 🌈
+
+
+Asserts:  2 pass  0 fail  2 of 2 complete
+Suites:   1 pass  0 fail  1 of 1 complete
+
+# { total: 2, pass: 2 }
+# time=823.167ms
+
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 2/2 )
+Branches     : 100% ( 0/0 )
+Functions    : 100% ( 1/1 )
+Lines        : 100% ( 2/2 )
+================================================================================
+```
+
+`#success`
+
+
+
 Instead of duplicating content here, 
 please see:
 [typescriptlang.org/docs/handbook](https://www.typescriptlang.org/docs/handbook/)
+
+> **Note**: we will be extending this doc 
+> as needed, but until then, we recommend the _official_ docs!
 
 <!--
 ## Types
@@ -180,9 +311,11 @@ please see:
 
 - Home: 
 [typescriptlang.org](https://www.typescriptlang.org/)
-- What is TypeScript and Why You Should Use It For Your Next Project?
+- What is `TypeScript` and Why You Should Use It For Your _Next_ Project?
 https://prismic.io/blog/what-is-typescript
 - What problem does `TypeScript` _solve_?
 https://dev.to/ricardopaul/what-problem-does-typescript-solve-5fka
-- Getting started with TypeScript:
+- Getting started with `TypeScript`:
 https://dev.to/newswim/getting-started-with-typescript-25l9
+- How to run `TypeScript` files from command line?
+https://stackoverflow.com/questions/33535879/how-to-run-typescript-files-from-command-line
