@@ -6,7 +6,7 @@
     "@tapjs/typescript": "^3.5.10",
     "nyc": "^18.0.0",
     "tap": "^21.7.2",
-    "tsx": "^4.21.0",
+    "tsx": "^4.22.4",
     "typescript": "^6.0.3"
   },
   "scripts": {
