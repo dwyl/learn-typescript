@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Quick intro to TypeScript for busy engineers!",
   "devDependencies": {
-    "@tapjs/typescript": "^3.5.8",
+    "@tapjs/typescript": "^3.5.10",
     "nyc": "^18.0.0",
     "tap": "^21.7.2",
     "tsx": "^4.21.0",
