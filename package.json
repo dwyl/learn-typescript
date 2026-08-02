@@ -7,7 +7,7 @@
     "nyc": "^18.0.0",
     "tap": "^21.7.5",
     "tsx": "^4.23.1",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   },
   "scripts": {
     "test": "nyc --reporter=lcov tap ./add.test.ts",
